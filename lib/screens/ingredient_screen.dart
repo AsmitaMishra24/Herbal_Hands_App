@@ -51,7 +51,7 @@ class AjwainColumn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return _buildColumn(
-      imagePath: 'assets/images/ajwain.png',
+      imagePath: 'assets/images/ajwain1.png',
       text: 'Ajwain',
     );
   }
