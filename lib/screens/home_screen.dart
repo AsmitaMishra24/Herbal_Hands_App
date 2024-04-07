@@ -1,26 +1,7 @@
+import 'package:app_herbal_hands/main.dart';
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const HomeScreen());
-}
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData.dark().copyWith(
-        scaffoldBackgroundColor: Colors.black,
-      ),
-      home: Scaffold(
-        body: SafeArea(
-          child: HomeS(),
-        ),
-      ),
-    );
-  }
-}
 
 class HomeS extends StatelessWidget {
   const HomeS({Key? key}) : super(key: key);
@@ -29,7 +10,7 @@ class HomeS extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Container(
-        width: 412,
+        width: 411.4,
         height: 892,
         clipBehavior: Clip.antiAlias,
         decoration: BoxDecoration(
@@ -69,7 +50,7 @@ class SearchBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 12.0),
+      padding: const EdgeInsets.only(top: 18.0), // Add padding of 8 pixels on top
       child: Container(
         width: 370,
         height: 48,
@@ -119,36 +100,45 @@ class SearchBar extends StatelessWidget {
   }
 }
 
-
 class HomeRemediesColumn extends StatelessWidget {
   const HomeRemediesColumn({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        color: const Color(0xFF2A2B2F),
-        borderRadius: BorderRadius.circular(20),
-      ),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          CircleImage(imagePath: 'assets/images/home_remedies.png'),
-          SizedBox(height: 20),
-          Text(
-            'Home Remedies',
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 18,
-              fontFamily: 'Inria Sans',
-              fontWeight: FontWeight.w400,
+    return GestureDetector(
+      onTap: () {
+        // Navigate to the new screen when the container is clicked
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => AlimentScreen()), // Replace YourNewScreen with your actual screen
+        );
+      },
+      child: Container(
+        decoration: BoxDecoration(
+          color: const Color(0xFF2A2B2F),
+          borderRadius: BorderRadius.circular(20),
+        ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            CircleImageHome(imagePath: 'assets/images/home_remedies.png'),
+            SizedBox(height: 20),
+            Text(
+              'Home Remedies',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 18,
+                fontFamily: 'Inria Sans',
+                fontWeight: FontWeight.w400,
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
 }
+
 
 class CreatePostColumn extends StatelessWidget {
   const CreatePostColumn({Key? key}) : super(key: key);
@@ -163,7 +153,7 @@ class CreatePostColumn extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          CircleImage(imagePath: 'assets/images/create_post.png'),
+          CircleImageHome(imagePath: 'assets/images/create_post.png'),
           SizedBox(height: 20),
           Text(
             'Create post',
@@ -193,7 +183,7 @@ class CommunityColumn extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          CircleImage(imagePath: 'assets/images/community.png'),
+          CircleImageHome(imagePath: 'assets/images/community.png'),
           SizedBox(height: 20),
           Text(
             'Community',
@@ -223,7 +213,7 @@ class ShopColumn extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          CircleImage(imagePath: 'assets/images/shop.png'),
+          CircleImageHome(imagePath: 'assets/images/shop.png'),
           SizedBox(height: 20),
           Text(
             'Shop',
@@ -253,7 +243,7 @@ class DoctorColumn extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          CircleImage(imagePath: 'assets/images/doctor.png'),
+          CircleImageHome(imagePath: 'assets/images/doctor.png'),
           SizedBox(height: 20),
           Text(
             'Doctor',
@@ -283,7 +273,7 @@ class BlogsColumn extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          CircleImage(imagePath: 'assets/images/blogs.png'),
+          CircleImageHome(imagePath: 'assets/images/blogs.png'),
           SizedBox(height: 20),
           Text(
             'Blogs',
@@ -313,7 +303,7 @@ class DiscoverColumn extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          CircleImage(imagePath: 'assets/images/discover.png'),
+          CircleImageHome(imagePath: 'assets/images/discover.png'),
           SizedBox(height: 20),
           Text(
             'Discover',
@@ -343,7 +333,7 @@ class AccountColumn extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          CircleImage(imagePath: 'assets/images/account.png'),
+          CircleImageHome(imagePath: 'assets/images/account.png'),
           SizedBox(height: 20),
           Text(
             'Account',
@@ -360,10 +350,10 @@ class AccountColumn extends StatelessWidget {
   }
 }
 
-class CircleImage extends StatelessWidget {
+class CircleImageHome extends StatelessWidget {
   final String imagePath;
 
-  const CircleImage({Key? key, required this.imagePath}) : super(key: key);
+  const CircleImageHome({Key? key, required this.imagePath}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -383,3 +373,4 @@ class CircleImage extends StatelessWidget {
     );
   }
 }
+

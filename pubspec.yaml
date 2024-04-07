@@ -68,6 +68,28 @@ flutter:
     - assets/images/blogs.png
     - assets/images/discover.png
     - assets/images/account.png
+    - assets/images/adarak.png
+    - assets/images/ajwain.png
+    - assets/images/amla.png
+    - assets/images/anar.png
+    - assets/images/blood.png
+    - assets/images/bones.png
+    - assets/images/collaborate1.png
+    - assets/images/collaborate2.png
+    - assets/images/dalchini.png
+    - assets/images/dhaniya.png
+    - assets/images/elaichi.png
+    - assets/images/general.png
+    - assets/images/ghee.png
+    - assets/images/haldi.png
+    - assets/images/kidney.png
+    - assets/images/lungs.png
+    - assets/images/obesity.png
+    - assets/images/sleep.png
+    - assets/images/stomach.png
+    - assets/images/throat.png
+    - assets/images/vomiting.png
+    - assets/images/ajwain2.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
