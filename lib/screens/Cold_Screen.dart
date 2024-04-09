@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'haldi.dart';
 
 class ColdScreen extends StatelessWidget {
   const ColdScreen({Key? key}) : super(key: key);
@@ -35,7 +35,7 @@ class HaldiColumn extends StatelessWidget {
       onTap: () {
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => ColdScreen()),
+          MaterialPageRoute(builder: (context) => HaldiScreen()),
         );
       },
       child: _buildColumn(

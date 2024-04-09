@@ -1,6 +1,6 @@
 import 'package:app_herbal_hands/main.dart';
 import 'package:flutter/material.dart';
-
+import 'create_post_screen.dart';
 
 
 class HomeS extends StatelessWidget {
@@ -139,32 +139,40 @@ class HomeRemediesColumn extends StatelessWidget {
   }
 }
 
-
 class CreatePostColumn extends StatelessWidget {
   const CreatePostColumn({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        color: const Color(0xFF2A2B2F),
-        borderRadius: BorderRadius.circular(20),
-      ),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          CircleImageHome(imagePath: 'assets/images/create_post.png'),
-          SizedBox(height: 20),
-          Text(
-            'Create post',
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 18,
-              fontFamily: 'Inria Sans',
-              fontWeight: FontWeight.w400,
-            ),
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => CreatePostScreen(),
           ),
-        ],
+        );
+      },
+      child: Container(
+        decoration: BoxDecoration(
+          color: const Color(0xFF2A2B2F),
+          borderRadius: BorderRadius.circular(20),
+        ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            CircleImageHome(imagePath: 'assets/images/create_post.png'),
+            SizedBox(height: 20),
+            Text(
+              'Create post',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 18,
+                fontFamily: 'Inria Sans',
+                fontWeight: FontWeight.w400,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -373,4 +381,3 @@ class CircleImageHome extends StatelessWidget {
     );
   }
 }
-
