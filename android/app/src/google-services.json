@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "607039919960",
+    "project_id": "newproject-e8b8c",
+    "storage_bucket": "newproject-e8b8c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:607039919960:android:d4cc642b27e0d74142372d",
+        "android_client_info": {
+          "package_name": "com.example.app_herbal_hands"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD2dauDbPFVSnXiQrJyxz3hlzQVHF0ZeDs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
